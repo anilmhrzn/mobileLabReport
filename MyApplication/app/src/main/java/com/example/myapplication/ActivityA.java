@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.ArrayList;
+
 public class ActivityA extends AppCompatActivity {
     Button nextActivity;
     TextInputEditText name ;
@@ -37,11 +39,9 @@ public class ActivityA extends AppCompatActivity {
             public void onClick(View view) {
                 input_name=name.getText().toString();
                 input_age=age.getText().toString();
-                Bundle bundle=new Bundle();
-                bundle.putString("name",input_name);
-                bundle.putInt("age",Integer.parseInt(input_age));
+                ArrayList<Student> studentList = new ArrayList<>();
+                studentList.add(new Student(input_name,Integer.parseInt(input_age)));
                 Intent intent =new Intent(ActivityA.this,ActivityB.class);
-                intent.putExtras(bundle);
                 startActivity(intent);
 
             }
