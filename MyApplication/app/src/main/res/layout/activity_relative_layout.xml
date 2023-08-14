@@ -12,12 +12,22 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_centerInParent="true"
-        android:text="Relative Layout TextView1" />
+        android:text="child1 of Relative Layout " />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
+        android:textSize="18sp"
         android:layout_centerHorizontal="true"
-        android:text="Relative Layout TextView2" />
+        android:text="child2 of Relative Layout " />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:text="child3 of Relative Layout " />
+
 </RelativeLayout>

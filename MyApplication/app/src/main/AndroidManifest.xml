@@ -23,16 +23,14 @@
         </activity>
         <activity
             android:name=".RelativeLayout"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Linearlayout"
-            android:exported="true"></activity>
+            android:exported="false">
+
+        </activity>
     </application>
 
 </manifest>
