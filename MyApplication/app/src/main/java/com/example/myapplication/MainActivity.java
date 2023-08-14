@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import java.util.List;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
@@ -17,13 +19,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String[] months= {
-                "January","February","March","April","May","June","July","August","September","October","November","December"
+        GridView gridView;
+        String[] num = {
+                "i","ii","iii","iv","v","vi","vii","viii"
+                ,"ix","x","xi","xii","xiii","xiv","xv","xi","xvii",
+                "xviii","xix","xx"
         };
-
-        this.listView = findViewById(R.id.listView1);
+        gridView = findViewById(R.id.gridView);
         ArrayAdapter<String> adapter = new
-                ArrayAdapter<>(this,R.layout.listitem,months);
-        listView.setAdapter(adapter);
+                ArrayAdapter<>(this,R.layout.grid_item,num);
+        gridView.setAdapter(adapter);
     }
 }
